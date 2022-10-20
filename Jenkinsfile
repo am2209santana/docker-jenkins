@@ -12,7 +12,6 @@ pipeline {
         sh 'docker build -t amsantana/ubuntu:latest .'
       }
     }
-    stages {
     stage('Deploy') {
       steps {
         sh 'docker build run -d amsantana/ubuntu:latest .'
@@ -35,4 +34,3 @@ pipeline {
     }
   }
   }
-}
