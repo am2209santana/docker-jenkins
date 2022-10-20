@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker build run -d amsantana/ubuntu:latest .'
+        sh 'docker build run -d amsantana/ubuntu:latest'
       }
     }
     stage('Login') {
