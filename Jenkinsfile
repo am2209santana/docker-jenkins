@@ -17,12 +17,12 @@ pipeline {
         sh 'docker run -d -p 80:80 amsantana/ubuntu:latest'
       }
     }
-    stage('Login') {
+    stage('Login at DockerHub') {
       steps {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
-    stage('Push') {
+    stage('Push Container into DockerHub') {
       steps {
         sh 'docker push amsantana/ubuntu:latest'
       }
