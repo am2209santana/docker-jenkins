@@ -22,7 +22,7 @@ pipeline {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
-    stage('Push Application at DockerHub') {
+    stage('Push DockerHub') {
       steps {
         sh 'docker push amsantana/ubuntu:latest'
       }
