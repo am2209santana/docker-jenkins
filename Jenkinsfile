@@ -7,22 +7,22 @@ pipeline {
     DOCKERHUB_CREDENTIALS = credentials('amsantana-dockerhub')
   }
   stages {
-    stage('Build') {
+    stage('Build Application') {
       steps {
         sh 'docker build -t amsantana/ubuntu:latest .'
       }
     }
-    stage('Deploy') {
+    stage('Deploy Application') {
       steps {
         sh 'docker run -d -p 80:80 amsantana/ubuntu:latest'
       }
     }
-    stage('Login at DockerHub') {
+    stage('Connect DockerHub') {
       steps {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
-    stage('Push Container into DockerHub') {
+    stage('Push Application at DockerHub') {
       steps {
         sh 'docker push amsantana/ubuntu:latest'
       }
