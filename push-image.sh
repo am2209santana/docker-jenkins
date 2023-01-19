@@ -4,4 +4,4 @@
 set -eu
 
 # push the image to your docker hub repository 
-docker push  $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPO_NAME
+docker push $IMAGE_TAG
