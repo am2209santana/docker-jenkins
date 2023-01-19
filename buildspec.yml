@@ -10,10 +10,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - ./build-docker.sh
+      - ./build-image.sh
           
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - ./push-docker.sh
+      - ./push-image.sh
