@@ -16,3 +16,9 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub
+  artifacts:
+    files:
+    - '**/*'
+    base-directory: base_dir
+    name: build-artifact-name
+    discard-paths: no
