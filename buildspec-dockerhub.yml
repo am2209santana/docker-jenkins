@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - chmod +x login-docker.sh build-image.sh push-image.sh
+      - echo Logging in to DockerHub...
+      - ./login-docker.sh
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - ./build-image.sh
+          
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - ./push-image.sh
