@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t amsantana-dockerhub .
-      - docker tag amsantana-dockerhub:latest 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub:latest      
+      - docker build -t hello-world .
+      - docker tag hello-world 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub     
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub:latest
+      - docker push 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub
