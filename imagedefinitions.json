@@ -1,6 +1,6 @@
 [
   {
-    "name": "dockercontainer1",
+    "name": "hellow-world",
     "imageUri": "547155632729.dkr.ecr.us-east-1.amazonaws.com/amsantana-dockerhub:latest"
   }
 ]
