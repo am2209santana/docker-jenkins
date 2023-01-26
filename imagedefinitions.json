@@ -1,6 +1,6 @@
 [
   {
     "name": "hello-world",
-    "imageUri": "196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub:latest"
+    "imageUri": "547155632729.dkr.ecr.us-east-1.amazonaws.com/amsantana-dockerhub:latest"
   }
 ]
