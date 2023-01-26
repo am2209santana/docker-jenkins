@@ -4,15 +4,15 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 196213906354.dkr.ecr.us-west-2.amazonaws.com
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 547155632729.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t hello-world .
-      - docker tag hello-world 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub     
+      - docker tag hello-world 547155632729.dkr.ecr.us-east-1.amazonaws.com/amsantana-dockerhub     
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 196213906354.dkr.ecr.us-west-2.amazonaws.com/amsantana-dockerhub
+      - docker push 547155632729.dkr.ecr.us-east-1.amazonaws.com/amsantana-dockerhub
