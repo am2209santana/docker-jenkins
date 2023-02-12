@@ -5,8 +5,20 @@ FROM public.ecr.aws/lts/ubuntu:latest
 RUN apt-get update && \
  apt-get -y install apache2
 
-# Install apache and write hello world message
-RUN echo 'Hello World!' > /var/www/html/index.html
+# Install apache and sample application message
+RUN echo '<html>
+	<head>
+		<title>Containerized Sample App</title>
+		<style>body {margin-top: 40px; background-color: #333;} </style>
+	</head>
+	<body>
+		<div style=color:white;text-align:center>
+			<h1>Containerized DockerHub App</h1>
+			<h2>Congratulations!</h2>
+			<p>Your application is running on a container in a On-Premises Host .</p>
+		</div>
+	</body>
+</html>' > /var/www/html/index.html
 
 # Configure apache
 RUN echo '. /etc/apache2/envvars' > /root/run_apache.sh && \
