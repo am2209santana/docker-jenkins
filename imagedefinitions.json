@@ -1,6 +1,6 @@
 [
   {
-    "name": "hellow-world",
-    "imageUri": "547155632729.dkr.ecr.us-east-1.amazonaws.com/amsantana-dockerhub:latest"
+    "name": "hello-world",
+    "imageUri": "241326262250.dkr.ecr.us-east-1.amazonaws.com/containerized-app:latest"
   }
 ]
