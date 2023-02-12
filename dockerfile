@@ -6,7 +6,7 @@ RUN apt-get update && \
  apt-get -y install apache2
 
 # Install apache and sample application message
-RUN echo '<html> <head> <title>Conteinerized Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Conteinerized Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container as expected.</p> </div></body></html>' >/var/www/html/index.html
+RUN echo '<html> <head> <title>Conteinerized Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Conteinerized Sample App</h1> <h1>Congratulations!</h1> <p>Your application is now running on a container as expected.</p> </div></body></html>' >/var/www/html/index.html
 
 # Configure apache
 RUN echo '. /etc/apache2/envvars' > /root/run_apache.sh && \
