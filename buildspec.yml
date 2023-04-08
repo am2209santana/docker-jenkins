@@ -10,7 +10,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t my-container-app .
-      - docker tag hello-world 483639178502.dkr.ecr.us-east-1.amazonaws.com/my-ecr-repo     
+      - docker tag my-container-app 483639178502.dkr.ecr.us-east-1.amazonaws.com/my-ecr-repo     
   post_build:
     commands:
       - echo Build completed on `date`
