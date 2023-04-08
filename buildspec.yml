@@ -9,11 +9,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t my-container-app .
-      - docker tag my-container-app:latest 483639178502.dkr.ecr.us-east-1.amazonaws.com/my-container-app:latest
+      - docker build -t docker build -t my-ecr-repo .
+      - docker tag my-ecr-repo:latest 483639178502.dkr.ecr.us-east-1.amazonaws.com/my-ecr-repo:latest
      
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 483639178502.dkr.ecr.us-east-1.amazonaws.com/my-container-app:latest
+      - docker push 483639178502.dkr.ecr.us-east-1.amazonaws.com/my-ecr-repo:latest
